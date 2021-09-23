@@ -1,8 +1,7 @@
 import numpy as np
 from deap import base, creator, tools, algorithms
-from init_log import init_log
-from utils import Utils
-from utils import cx_random_respect
+from src.init_log import init_log
+from src.utils import Utils
 
 creator.create("FitnessMin", base.Fitness, weights=(-1.,))
 FitnessMin = creator.FitnessMin

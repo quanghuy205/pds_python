@@ -1,7 +1,7 @@
 from ortools.linear_solver import pywraplp
 
-from init_log import init_log
-from utils import Utils
+from src.init_log import init_log
+from src.utils import Utils
 
 
 def solve(logger):

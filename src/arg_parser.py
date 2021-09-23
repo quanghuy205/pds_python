@@ -7,7 +7,7 @@ def parse_argument():
     parser = ArgumentParser()
     parser.add_argument('--pop-size', default=50, type=int)
     parser.add_argument('--iterations', default=1000, type=int)
-    parser.add_argument('--patience', default=20, type=int)
+    parser.add_argument('--patience', default=20, typ=int)
     parser.add_argument('--cross-rate', default=0.7, type=float)
     parser.add_argument('--mut-rate', default=0.1, type=float)
 
