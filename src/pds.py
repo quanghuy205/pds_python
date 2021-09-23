@@ -46,16 +46,18 @@ class MainPDS:
         while i < self.num_node + 1:
             i += 1
             for j in range(i):
-                 if self.valid_arc(j, i):
+                if self.valid_arc(j, i):
                     for l in range(len(self.list_label[j])):
                         temp = [self.list_label[j][l][0] + self.truck_time_matrix[self.T.cities[j], self.T.cities[j]],
-                                [self.list_label[j][l][1] + self.compute_drone_cost()
+                                self.list_label[j][l][1] + self.compute_drone_cost(j, i)]
+
+                        self.list.addWithDominance(i, temp)
 
 
 def main():
 
     pdstsp = MainPDS()
-
+    
     path = tspsolve.nearest_neighbor(np.array(pdstsp.truck_time_matrix))
     new_path = tspsolve.two_opt(np.array(pdstsp.truck_time_matrix), path, verbose=True)
 
