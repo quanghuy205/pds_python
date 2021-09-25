@@ -57,7 +57,27 @@ class MainPDS:
         self.two_opt()
 
     def solve_pms(self):
-        pass
+        cost_length = [[]]
+        total_time_assign = [0 for i in range(self.num_drone)]
+        T_opt_drone_1 = [Tour() for i in range(self.num_node)]
+        drone_customer = [[]]
+        for i in range(self.T_drone.length()):
+            drone_customer.append([self.T_drone.cities[i], self.drone_time_matrix[self.T_drone.cities[i]]])
+
+        for i in range(self.T_drone.length()):
+            cost_length.append(drone_customer[i])
+
+        cost_length = self.Sort(cost_length)
+
+        while cost_length:
+            
+    def Sort(sub_li):
+
+        # reverse = None (Sorts in Ascending order)
+        # key is set to sort using second element of
+        # sublist lambda has been used
+        sub_li.sort(True, key=lambda x: x[1])
+        return sub_li
 
     def compute_drone_cost(self, j, i):
         cost = 0.0
