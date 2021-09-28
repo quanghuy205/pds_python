@@ -70,7 +70,7 @@ class MainPDS:
         cost_length = self.Sort(cost_length)
 
         while cost_length:
-            
+
     def Sort(sub_li):
 
         # reverse = None (Sorts in Ascending order)
@@ -133,14 +133,8 @@ def main():
 
     pdstsp = MainPDS()
 
-    TSP = christofides.compute(pdstsp.truck_time_matrix)
 
-    # path = tspsolve.nearest_neighbor(np.array(pdstsp.truck_time_matrix))
-    #
-    # new_path = tspsolve.two_opt(np.array(pdstsp.truck_time_matrix), path, verbose=True)
-    #
-    #
-    # print(path)
+
 
 
 if __name__ == "__main__":
